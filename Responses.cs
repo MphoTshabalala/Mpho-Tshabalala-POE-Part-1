@@ -51,7 +51,7 @@ namespace CyberSecurityAwarenessBot
                 return "I didn't understand that. Type 'menu' to see available topics.";
             }
         }
-
+        //The main Menu 
         private static string ShowMenu()
         {
             return "\n========= CYBERSECURITY MENU =========\n" +
