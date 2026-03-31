@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CYBERPOE
+namespace CyberSecurityAwarenessBot
 {
     using System;
 

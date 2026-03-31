@@ -18,7 +18,7 @@ namespace CyberSecurityAwarenessBot
             RunChat();
         }
 
-        // 🎤 Voice Greeting
+        // Voice Greeting
         private void PlayVoiceGreeting()
         {
             try
@@ -43,7 +43,7 @@ namespace CyberSecurityAwarenessBot
             }
         }
 
-        // 🛡️ ASCII Logo
+        // ASCII logo
         private void ShowLogo()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -63,7 +63,7 @@ namespace CyberSecurityAwarenessBot
             Console.ResetColor();
         }
 
-        // ⏳ Loading Animation
+        // Loading Animation
         private void ShowLoading()
         {
             Console.Write("\nStarting chatbot");
@@ -77,7 +77,7 @@ namespace CyberSecurityAwarenessBot
             Console.WriteLine("\n");
         }
 
-        // 👤 Name Input with Validation
+        // Name Input with Validation
         private void GetUserName()
         {
             while (true)
@@ -108,7 +108,7 @@ namespace CyberSecurityAwarenessBot
             Console.ResetColor();
         }
 
-        // 🔄 Chat Loop
+        // Chat Loop
         private void RunChat()
         {
             string input = "";
