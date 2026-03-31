@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CYBERPOE
+{
+    using System;
+
+    public class UserInterface
+    {
+        public static void DisplayLogo()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.WriteLine("=================================");
+            Console.WriteLine("   CYBERSECURITY AWARENESS BOT  ");
+            Console.WriteLine("=================================");
+
+            Console.WriteLine(@"
+        [ 🔒 CYBER SAFE 🔒 ]
+
+           _________
+          |  _____  |
+          | |     | |
+          | | 🔒 | |
+          | |_____| |
+          |_________|
+
+        Stay Safe Online!
+        ");
+
+            Console.ResetColor();
+        }
+    }
+}
