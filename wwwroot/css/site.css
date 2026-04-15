@@ -1,0 +1,12 @@
+body {
+    background: linear-gradient( to right, #4facfe, #00f2fe );
+}
+
+.navbar {
+    background-color: #0d6efd !important;
+}
+
+table {
+    background-color: white;
+    border-radius: 10px;
+}

@@ -1,13 +1,37 @@
-﻿using System;
+using GrootmanEvents.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace CyberSecurityAwarenessBot
-{
-    class Program
-    {
-        static void Main(string[] args)
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services
+builder.Services.AddControllersWithViews();
+
+// ✅ FIXED DATABASE CONFIG
+builder.Services.AddDbContext<GrootmanEventsDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        sqlOptions =>
         {
-            Chatbot bot = new Chatbot();
-            bot.Start();
-        }
-    }
+            sqlOptions.EnableRetryOnFailure();
+        }));
+
+var app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
 }
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();

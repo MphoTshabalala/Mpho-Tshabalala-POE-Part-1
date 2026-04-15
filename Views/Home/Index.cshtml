@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center mt-5">
+
+    <h1>
+        🎉 Welcome to Grootman Events 🎉
+    </h1>
+
+    <p>
+        Manage venues, events and bookings easily.
+    </p>
+
+    <a asp-controller="Venue"
+           asp-action="Index"
+           class="btn btn-primary m-2">
+
+        Venues
+
+    </a>
+
+    <a asp-controller="Event"
+           asp-action="Index"
+           class="btn btn-success m-2">
+
+        Events
+
+    </a>
+
+    <a asp-controller="Booking"
+           asp-action="Index"
+           class="btn btn-warning m-2">
+
+        Bookings
+
+    </a>
+
+</div>
